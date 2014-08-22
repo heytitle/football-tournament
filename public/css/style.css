@@ -1,0 +1,13 @@
+.content {
+    text-align: center;
+    margin-top: 10px;
+}
+
+table {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td.emphazie {
+    text-transform: uppercase;
+}

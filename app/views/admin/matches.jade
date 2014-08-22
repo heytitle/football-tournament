@@ -1,10 +1,28 @@
-h1 Matches
-ul
-    each m in matches
-        li
-            span
-                | #{m.stadium} #{m.time} #{m.home} [ #{m.home_score.length} ] vs [ #{m.away_score.length} ] #{m.away}
-            if isEditable
-                span
-                    a(href="/admin/edit/#{m.id}") edit
+extends ../layout
+
+block content
+    div.header
+        h1 Fixture
+    div.content
+        table.pure-table
+            thead
+                tr
+                    th Field
+                    th Time
+                    th Team 1
+                    th VS
+                    th Team 2
+
+            tbody
+            each m,index in matches
+                tr
+                    td #{m.stadium}
+                    td #{m.time}
+                    td(class="emphazie") #{m.home}
+                    td #{m.home_score.length} - #{m.away_score.length}
+                    td(class="emphazie") #{m.away}
+
+                    if isEditable
+                        td
+                            a(href="/admin/edit/#{m.id}") edit
 

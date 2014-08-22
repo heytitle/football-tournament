@@ -5,8 +5,24 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')
     title= title
     block css
+      link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0/pure-min.css')
+      link(rel='stylesheet', href='http://purecss.io/combo/1.16.14?/css/layouts/side-menu.css')
       link(rel='stylesheet', href='/css/style.css')
     block js
       script(src='http://localhost:35729/livereload.js')
   body
-    block content
+    div#layout
+        a(href="#menu",id="menuLink",class="menu-link")
+            span
+        div#menu
+            div(class="pure-menu pure-menu-open")
+                a(href="#",class="pure-menu-heading") XIT#1
+                ul
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/fixture") Fixture
+        div(id="#main" class="center")
+            block content
+    script(src='http://purecss.io/combo/1.16.14?/js/ui.js')
+
