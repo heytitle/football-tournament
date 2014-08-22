@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 XIT#1
+  p our score board
+  ul
+    each t in teams
+        li #{t.name} #{t.score} #{t.total_goal}

@@ -1,0 +1,10 @@
+h1 Matches
+ul
+    each m in matches
+        li
+            span
+                | #{m.stadium} #{m.time} #{m.home} [ #{m.home_score.length} ] vs [ #{m.away_score.length} ] #{m.away}
+            if isEditable
+                span
+                    a(href="/admin/edit/#{m.id}") edit
+

@@ -1,0 +1,20 @@
+a(href="/admin") back
+
+h1 Edit
+
+if isSave
+    i Saved!
+
+form(action="/admin/match/save",method="POST")
+    div
+        | #{match.home}
+        input(type="text",name="home_score",value="#{match.home_score.length}")
+    div VS
+    div
+        | #{match.away}
+        input(type="text",name="away_score",value="#{match.away_score.length}")
+    input(type="hidden",name="matchID",value="#{match.id}")
+    input(type="hidden",name="home_team",value="#{match.home}")
+    input(type="hidden",name="away_team",value="#{match.away}")
+    input(type="submit",name="save")
+

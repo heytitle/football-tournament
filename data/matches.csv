@@ -1,0 +1,16 @@
+stadium,time,home,away,referee
+1,10:00,it1,it7,it6
+1,10:30,it3-4,it7,it1
+1,11:00,it3-4,it1,it2
+1,11:30,it7,it2,it3-4
+1,12:00,it6,it3-4,it1
+1,13:00,it1,it2,it3-4
+1,13:30,it8,it7,it6
+1,14:00,it2,it3-4,it7
+1,14:30,it1,it6,it2
+1,15:00,it3-4,it8,it1
+1,15:30,it6,it7,it8
+2,10:00,it2,it8,it3-4
+2,10:30,it6,it2,it8
+2,11:00,it8,it6,it7
+2,11:30,it1,it8,it6
