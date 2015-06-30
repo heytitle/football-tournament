@@ -12,7 +12,7 @@ block content
                     th Team 1
                     th VS
                     th Team 2
-
+                    th Ref
             tbody
             each m,index in matches
                 tr
@@ -21,6 +21,7 @@ block content
                     td(class="emphazie") #{m.home}
                     td #{m.home_score.length} - #{m.away_score.length}
                     td(class="emphazie") #{m.away}
+                    td(class="emphazie") #{m.referee}
 
                     if isEditable
                         td
