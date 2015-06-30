@@ -7,6 +7,7 @@ var Schema = mongoose.Schema;
 var LeagueSchema = new Schema(
     {
         name: String,
+        date: String,
         teams: Schema.Types.Mixed,
     },
     { collection: 'league' }
@@ -22,7 +23,7 @@ LeagueSchema.statics.matchFinish = function ( match, callback ) {
 }
 
 LeagueSchema.statics.leagueTable = function( callback ) {
-    this.findOne( { name: 'xit' }, function( err, league ) {
+    this.findOne( { }, function( err, league ) {
         var teams = league.teams
         var keys = Object.keys(teams);
         var teamsArray =[];
@@ -45,7 +46,8 @@ LeagueSchema.statics.leagueTable = function( callback ) {
             teamsArray.push(team);
         }
         teamsArray.sort(sortLeague).reverse();
-        callback(teamsArray);
+        league.teams = teamsArray;
+        callback(league);
     });
 }
 

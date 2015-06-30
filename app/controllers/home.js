@@ -11,9 +11,9 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-    League.leagueTable( function( table ) {
+    League.leagueTable( function( league ) {
         res.render('index',{
-            teams: table
+            league: league
         });
     });
 });
