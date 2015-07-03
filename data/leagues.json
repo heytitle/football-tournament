@@ -1,13 +1,16 @@
 [
     {
-        name: 'xit',
+        name: 'XIT #2',
+        date: '5 Jul 2015',
         teams: {
             "it1": {},
             "it2": {},
             "it3-4": {},
             "it6": {},
             "it7": {},
-            "it8": {}
+            "it8": {},
+            "it9": {},
+            "it-youth": {}
         }
     }
 ]
