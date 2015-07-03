@@ -45,7 +45,7 @@ LeagueSchema.statics.leagueTable = function( callback ) {
 
             teamsArray.push(team);
         }
-        teamsArray.sort(sortLeague).reverse();
+        teamsArray.sort(sortLeague);
         league.teams = teamsArray;
         callback(league);
     });
